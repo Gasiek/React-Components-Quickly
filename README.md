@@ -14,3 +14,11 @@ The React Components Quickly extension allows you to quickly create a React comp
 2. Select "Create React Component" or "Create React Component with Styles" from the context menu.
 3. Enter the name of the component when prompted.
 4. If you selected the "Create React Component with Styles" option, a `styles.ts` file will also be created in the component folder.
+
+## Contributing
+
+If you encounter any issues or have suggestions for new features, please feel free to file an issue or submit a pull request on [GitHub](https://github.com/Gasiek/React-Components-Quickly).
+
+## License
+
+This extension is licensed under the [MIT License](https://github.com/Gasiek/React-Components-Quickly/blob/main/LICENSE).
