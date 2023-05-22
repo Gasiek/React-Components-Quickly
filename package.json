@@ -1,5 +1,6 @@
 {
   "name": "react-components-quickly",
+  "publisher": "Gasiek",
   "displayName": "React Components Quickly",
   "description": "Create react components directories quickly in explorer pane",
   "version": "0.0.1",
@@ -29,6 +30,20 @@
         "title": "Create React Component with Styles"
       }
     ],
+    "configuration": {
+      "title": "React Components Quickly",
+      "properties": {
+        "extensionName.indexFileContent": {
+          "type": "string",
+          "default": "type Props = {};\n\nconst ${folderName} = (props: Props) => {\n  return (\n    <div>${folderName}</div>\n  );\n};\n\nexport default ${folderName};\n"
+        },
+        "extensionName.stylesFileContent": {
+          "type": "string",
+          "default": "import { styled } from '@Utils/theme';\n\n"
+        }
+      }
+    }
+  },
     "menus": {
       "explorer/context": [
         {
