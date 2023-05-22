@@ -30,7 +30,7 @@ function createReactComponent(withStyles: boolean = false, uri: vscode.Uri): voi
 		if (!fs.existsSync(filePath)) {
 			fs.mkdirSync(filePath);
 
-			const config = vscode.workspace.getConfiguration('extensionName');
+			const config = vscode.workspace.getConfiguration('react-components-quickly');
 			const indexFileContent = config.get<string>('indexFileContent') || `type Props = {};
 
 const ${folderName} = (props: Props) => {
