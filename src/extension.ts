@@ -31,19 +31,11 @@ function createReactComponent(withStyles: boolean = false, uri: vscode.Uri): voi
 			fs.mkdirSync(filePath);
 
 			const config = vscode.workspace.getConfiguration('react-components-quickly');
-			const indexFileContent = config.get<string>('indexFileContent') || `type Props = {};
+			let indexFileContent = config.get<string>('indexFileContent') || '';
+			let stylesFileContent = config.get<string>('stylesFileContent') || '';
 
-const ${folderName} = (props: Props) => {
-  return (
-    <div>${folderName}</div>
-  );
-};
-
-export default ${folderName};
-`;
-			const stylesFileContent = config.get<string>('stylesFileContent') || `import { styled } from '@Utils/theme';
-
-`;
+			indexFileContent = indexFileContent.replace(/\${folderName}/g, folderName);
+			stylesFileContent = stylesFileContent.replace(/\${folderName}/g, folderName);
 
 			fs.writeFileSync(path.join(filePath, indexFileName), indexFileContent);
 			if (withStyles) {
